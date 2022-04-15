@@ -24,7 +24,7 @@ start()
 	: ${unicode:=$UNICODE}
 	: ${keymap:=$KEYMAP}
 	: ${extended_keymaps:=$EXTENDED_KEYMAPS}
-	: ${windowkeys:=$SET_WINDOWSKEYS}
+	: ${windowskeys:=$SET_WINDOWSKEYS}
 	: ${fix_euro:=$FIX_EURO}
 	: ${dumpkeys_charset:=${DUMPKEYS_CHARSET}}
 
@@ -46,7 +46,7 @@ start()
 		kmode="-u"
 		msg="UTF-8"
 	fi
-	yesno $windowkeys && wkeys="windowkeys"
+	yesno $windowskeys && wkeys="windowskeys"
 
 	# Set terminal encoding to either ASCII or UNICODE.
 	# See utf-8(7) for more information.
