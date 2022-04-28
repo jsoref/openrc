@@ -6,7 +6,6 @@ name: Coverity Scan
 
 on:
   push:
-    branches: [master]
 
 jobs:
   coverity:
@@ -18,7 +17,7 @@ jobs:
     - run: meson setup builddir/
       env:
         CC: gcc
-    - uses: vapier/coverity-scan-action@v1
+    - uses: check-spelling/coverity-scan-action@action
       with:
         command: ninja -C builddir
         email: ${{ secrets.COVERITY_SCAN_EMAIL }}
